@@ -1,3 +1,10 @@
+# todo
+handle videos, voice prompts, prompt poll, video prompt
+filtering
+download csv
+sorting
+basic stats?
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

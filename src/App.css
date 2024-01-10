@@ -1,4 +1,5 @@
-.App {
+* {
+  box-sizing: border-box;
   text-align: center;
 }
 
@@ -35,4 +36,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+img {
+  width: 300px;
+  display: inline-block;
+}
+
+.like {
+  width: 300px;
+  margin: 20px;
+  display: inline-block;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.pinned-buttons {
+  position: fixed;
+}
+
+.match {
+  border: 5px solid red;
 }
