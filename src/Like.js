@@ -3,8 +3,31 @@ import React from 'react';
 function Like({ match }) {
     const className = match.match ? 'like match' : 'like';
 
+    if (match.promptPoll != null) {
+        let options = []
+        for (let i = 0; i < match.promptPoll.options.length; i++) {
+            options.push(<p key={i} className={i===match.promptPoll.selectedOptionIndex?'selected-option':''}>{match.promptPoll.options[i]}</p>);
+        }
+        if (match.comment != null) {
+            options.push(<p key='comment'><strong>Response:</strong> {match.comment}</p>)
+        }
+        return (
+            <div className={className}>
+                {options}
+            </div>
+        );
+    }
+
+    if (match.video != null) {
+        return (
+            <div className={className}>
+                <video src={match.video.url} alt='Video not available' controls />
+                <p><strong>Caption:</strong> {match.video.caption}</p>
+                <p><strong>Location: </strong> {match.video.location}</p>
+            </div>
+        );
+    }
     if (match.photo != null & match.comment != null) {
-        console.log(match.photo);
         return (
             <div className={className}>
                 <img src={match.photo.url} alt='Image not available' />

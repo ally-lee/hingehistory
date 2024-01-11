@@ -6,9 +6,7 @@ function ImportFromFileBodyComponent({ setMatches }) {
 
     const handleFileRead = (e) => {
         const rawContent = JSON.parse(fileReader.result);
-        console.log(rawContent);
         const parsedContent = rawContent.map(matchData => new Match(matchData));
-        console.log(parsedContent);
         setMatches(parsedContent);
     }
 

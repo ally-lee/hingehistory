@@ -1,5 +1,5 @@
 # todo
-handle videos, voice prompts, prompt poll, video prompt
+handle voice prompts, video prompts
 filtering
 download csv
 sorting

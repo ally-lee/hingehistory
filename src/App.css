@@ -53,10 +53,20 @@ img {
   text-align: center;
 }
 
-.pinned-buttons {
+.header {
   position: fixed;
+  background-color: black;
+  color: white;
+}
+
+.content {
+  padding-top: 120px;
 }
 
 .match {
   border: 5px solid red;
+}
+
+.selected-option {
+  font-weight: bold;
 }

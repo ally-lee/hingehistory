@@ -23,6 +23,8 @@ function App() {
     const link = document.createElement('a')
     link.setAttribute('href', objUrl)
     link.setAttribute('download', 'matches.csv')
+
+    console.log(refinedData);
   }
 
   if (!matches) {
@@ -32,11 +34,22 @@ function App() {
   } else {
     return (
       <div>
-        <div className='pinned-buttons'>
+        <div className='header'>
           <button onClick={reset}>Start Over</button>
           <button onClick={download}>Export to CSV</button>
+          <p>
+            Note that due to privacy, Hinge is only able to release data on your own actions
+            (i.e., likes, messages).
+            Because of this, we're currently only displaying likes that you've sent.
+            Your dataset also includes profiles that liked you first and profiles you disliked,
+            but we don't have any information about those profiles.
+            If you want to access your complete dataset, click "Export to CSV".
+          </p>
         </div>
-        <LikeList matches={matches} />
+        <div className='content'>
+          <h1>Your Likes</h1>
+          <LikeList matches={matches} />
+        </div>
       </div>
     );
   }
