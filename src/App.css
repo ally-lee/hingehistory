@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   text-align: center;
+  font-family: Georgia;
 }
 
 .App-logo {
@@ -12,17 +13,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -38,35 +28,92 @@
   }
 }
 
-img {
-  width: 300px;
-  display: inline-block;
+.media {
+  width: 260px;
 }
 
 .like {
   width: 300px;
+  height: 500px;
   margin: 20px;
+  padding: 15px;
   display: inline-block;
+  overflow: scroll;
+  border: 5px solid purple;
+  border-radius: 10px;
 }
 
 .welcome {
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: purple;
+  background-image: url('../public/heart.png');
+}
+
+.welcome .content {
+  border: 10px solid pink;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  background-color: white;
 }
 
 .header {
   position: fixed;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: purple;
+  width: 100%;
+  z-index: 10;
+  padding: 10px;
+  background-image: url('../public/heart.png'), url('../public/heart.png');
+  background-position: top 10px left 10px, top 10px right 10px;
+  background-repeat: no-repeat;
+  background-size: 80px;
 }
 
 .content {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .match {
-  border: 5px solid red;
+  border: 5px solid pink;
+  background-image: url('../public/heart.png');
+  background-size: 80px;
 }
 
 .selected-option {
-  font-weight: bold;
+  border: 5px solid pink;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 5px solid pink;
+  color: purple;
+  font-size: calc(10px + 2vmin);
+}
+
+li {
+  text-align: left;
+}
+
+p {
+  background-color: white;
+}
+
+.likes-header {
+  position: sticky;
+  top: 100px;
+  background-color: white;
+  z-index: 10;
+}
+
+label {
+  padding: 5px;
+  margin: 5px;
 }

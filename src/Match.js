@@ -5,11 +5,19 @@ class Photo {
         this.location = location;
     }
 }
+
 class Video {
     constructor(url, caption, location) {
         this.url = url;
         this.caption = caption;
         this.location = location;
+    }
+}
+
+class VoicePrompt {
+    constructor(question, url) {
+        this.question = question;
+        this.url = url;
     }
 }
 
@@ -34,12 +42,14 @@ export default class Match {
         this.comment = null;
         this.photo = null;
         this.video = null;
+        this.videoPrompt = null;
         this.prompt = null;
         this.promptPoll = null;
         this.match = null;
         this.messageCount = 0;
         this.weMet = null;
         this.myType = null;
+
         if ('block' in matchData) {
             this.block = matchData['block'][0]['timestamp'];
         }
@@ -53,17 +63,11 @@ export default class Match {
 
             if ('promptPoll' in likeContent && likeContent['promptPoll']['questionId']) {
                 this.promptPoll = new PromptPoll(likeContent['promptPoll']['options'], likeContent['promptPoll']['selectedOptionIndex']['int']);
-            }
-            if ('voicePrompt' in likeContent && likeContent['voicePrompt']['question']) {
-                console.log('voice prompt found');
-                console.log(likeContent);
-            }
-            if ('videoPrompt' in likeContent && likeContent['videoPrompt']['videoUrl']) {
-                console.log('video prompt found');
-                console.log(likeContent);
-            }
-
-            if ('video' in likeContent && likeContent['video']['url']) {
+            } else if ('voicePrompt' in likeContent && likeContent['voicePrompt']['question']) {
+                this.voicePrompt = new VoicePrompt(likeContent['voicePrompt']['question'], likeContent['voicePrompt']['url']);
+            } else if ('videoPrompt' in likeContent && likeContent['videoPrompt']['videoUrl']) {
+                this.video = new Video(likeContent['videoPrompt']['videoUrl'], '', '');
+            } else if ('video' in likeContent && likeContent['video']['url']) {
                 this.video = new Video(
                     likeContent['video']['url'],
                     likeContent['video']['caption'],

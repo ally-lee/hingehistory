@@ -1,9 +1,7 @@
 # todo
-handle voice prompts, video prompts
-filtering
-download csv
-sorting
-basic stats?
+- test voice prompts, video prompts
+- handle when photos and videos aren't available
+- download csv
 
 # Getting Started with Create React App
 
