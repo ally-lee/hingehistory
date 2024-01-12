@@ -2,6 +2,10 @@
 - test voice prompts, video prompts
 - handle when photos and videos aren't available
 - download csv
+- custom domain
+- ask christina about prompt polls
+- hide form so it doesn't take up so much vertical space
+- clean up
 
 # Getting Started with Create React App
 

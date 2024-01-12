@@ -12,15 +12,7 @@ function LikeList({ matches, filter, sort }) {
         }
     }
 
-    const sortAsc = (a, b) => {
-        if (a.like < b.like) {
-            return -1;
-        } else if (a.like > b.like) {
-            return 1;
-        } else {
-            return 0;
-        }
-    }
+    const sortAsc = (a, b) => -1 * sortDesc(a, b);
 
     const sortFn = sort === 'desc' ? sortDesc : sortAsc;
 

@@ -11,7 +11,11 @@ function App() {
   const [sort, setSort] = useState('desc');
   const [filter, setFilter] = useState(null);
 
-  const reset = () => setMatches(null);
+  const reset = () => {
+    setMatches(null);
+    setSort('desc');
+    setFilter(null);
+  }
   const download = () => {
     const titleKeys = Object.keys(matches[0]);
     const refinedData = [];

@@ -32,8 +32,8 @@ function Like({ match }) {
         text.push(<p key='question'><strong>Question:</strong> {match.prompt.question}</p>);
         text.push(<p key='answer'><strong>Answer:</strong> {match.prompt.answer}</p>);
     } else if (match.voicePrompt != null) {
-        text.push(<p key='question'><strong>Question:</strong> {match.voicePrompt.question}</p>);
-        text.push(<audio className='media' src={match.voicePrompt.url} controls />);
+        content.push(<p key='question' className='text'><strong>Question:</strong> {match.voicePrompt.question}</p>);
+        content.push(<audio className='media' src={match.voicePrompt.url} controls />);
     }
 
     if (match.comment != null) {
