@@ -21,10 +21,10 @@ function PieChart({ matches }) {
 
     const data = [
         ["Match Type", "Count"],
-        ["Like and Match", likeAndMatch],
-        ["Like", like],
-        ["Match", match],
-        ["Block", block]
+        ["You liked them and they matched with you", likeAndMatch],
+        ["You liked them but they didn't match with you", like],
+        ["They liked you and you matched with them", match],
+        ["You didn't like them", block]
     ];
       
     const options = {

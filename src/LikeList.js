@@ -25,20 +25,21 @@ function LikeList({ matches, filter, sort }) {
     const sortFn = sort === 'desc' ? sortDesc : sortAsc;
 
     const filterMatches = (match) => {
-        if (filter === 'match') {
-            return match.match != null;
-        } else if (filter === 'no-match') {
-            return match.match === null;
-        } else if (filter === 'my-type') {
-            return match.myType === true;
-        } else if (filter === 'we-met') {
-            return match.weMet != null;
-        } else if (filter === 'photo') {
-            return match.photo != null;
-        } else if (filter === 'video') {
-            return match.video != null || match.videoPrompt != null;
-        } else {
-            return true;
+        switch (filter) {
+            case 'match':
+                return match.match != null;
+            case 'no-match':
+                return match.match === null;
+            case 'my-type':
+                return match.myType === true;
+            case 'we-met':
+                return match.weMet === 'Yes';
+            case 'photo':
+                return match.photo != null;
+            case 'video':
+                return match.video != null || match.videoPrompt != null;
+            default:
+                return true;
         }
     }
 

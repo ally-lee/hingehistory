@@ -49,12 +49,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: purple;
-  background-image: url('../public/heart.png');
+  background-image: url('./heart.png');
 }
 
 .welcome .content {
   border: 10px solid pink;
+  color: purple;
   padding: 20px;
   border-radius: 10px;
   max-width: 800px;
@@ -68,7 +68,7 @@
   width: 100%;
   z-index: 10;
   padding: 10px;
-  background-image: url('../public/heart.png'), url('../public/heart.png');
+  background-image: url('./heart.png'), url('./heart.png');
   background-position: top 10px left 10px, top 10px right 10px;
   background-repeat: no-repeat;
   background-size: 80px;
@@ -80,7 +80,7 @@
 
 .match {
   border: 5px solid pink;
-  background-image: url('../public/heart.png');
+  background-image: url('./heart.png');
   background-size: 80px;
 }
 
@@ -95,7 +95,6 @@ button {
   border-radius: 10px;
   border: 5px solid pink;
   color: purple;
-  font-size: calc(10px + 2vmin);
 }
 
 li {
@@ -108,12 +107,17 @@ p {
 
 .likes-header {
   position: sticky;
-  top: 100px;
+  top: 85px;
   background-color: white;
   z-index: 10;
 }
 
 label {
   padding: 5px;
-  margin: 5px;
+  margin: 0 5px;
+  display: inline-flex;
+}
+
+.info {
+  padding: 0 100px;
 }

@@ -62,7 +62,11 @@ export default class Match {
             const likeContent = JSON.parse(matchData['like'][0]['content'])[0];
 
             if ('promptPoll' in likeContent && likeContent['promptPoll']['questionId']) {
-                this.promptPoll = new PromptPoll(likeContent['promptPoll']['options'], likeContent['promptPoll']['selectedOptionIndex']['int']);
+                let selectedOptionIndex = likeContent['promptPoll']['selectedOptionIndex'];
+                if (typeof(selectedOptionIndex) != 'number') {
+                    selectedOptionIndex = selectedOptionIndex['int'];
+                }
+                this.promptPoll = new PromptPoll(likeContent['promptPoll']['options'], selectedOptionIndex);
             } else if ('voicePrompt' in likeContent && likeContent['voicePrompt']['question']) {
                 this.voicePrompt = new VoicePrompt(likeContent['voicePrompt']['question'], likeContent['voicePrompt']['url']);
             } else if ('videoPrompt' in likeContent && likeContent['videoPrompt']['videoUrl']) {
@@ -94,9 +98,7 @@ export default class Match {
         }
         if ('we_met' in matchData) {
             const weMetInfo = matchData['we_met'][matchData['we_met'].length - 1];
-            if (weMetInfo['did_meet_subject'] === 'Yes') {
-                this.weMet = weMetInfo['timestamp'];
-            }
+            this.weMet = weMetInfo['did_meet_subject'];
             if ('was_my_type' in weMetInfo) {
                 this.myType = weMetInfo['was_my_type'];
             }

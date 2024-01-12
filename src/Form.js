@@ -38,7 +38,6 @@ function Form({ filter, setFilter, sort, setSort }) {
             </label>
 
             <br />
-            <br />
 
             <strong>Sort by:</strong>
             <label className={sort === 'desc' ? 'selected-option' : ''}>

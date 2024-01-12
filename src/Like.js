@@ -9,6 +9,7 @@ function Like({ match }) {
         for (let i = 0; i < match.promptPoll.options.length; i++) {
             options.push(<li key={i} className={i===match.promptPoll.selectedOptionIndex?'selected-option':''}>{match.promptPoll.options[i]}</li>);
         }
+        content.push(<p key='poll'><strong>Poll:</strong></p>)
         content.push(<ul key='options'>{options}</ul>);
     } else if (match.video != null) {
         content.push(<video key='video' className='media' src={match.video.url} controls />);
@@ -19,7 +20,7 @@ function Like({ match }) {
             content.push(<p key='location'><strong>Location: </strong> {match.video.location}</p>);
         }
     } else if (match.photo != null) {
-        content.push(<img key='image' className='media' src={match.photo.url} alt='Image not available' />);
+        content.push(<img key='image' className='media' src={match.photo.url} />);
         if (match.photo.caption) {
             content.push(<p key='caption'><strong>Caption:</strong> {match.photo.caption}</p>);
         }
