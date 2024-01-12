@@ -20,7 +20,7 @@ function PieChart({ matches }) {
     }
 
     const data = [
-        ["Match Type", "Count"],
+        ["Interaction Type", "Count"],
         ["You liked them and they matched with you", likeAndMatch],
         ["You liked them but they didn't match with you", like],
         ["They liked you and you matched with them", match],
@@ -28,7 +28,7 @@ function PieChart({ matches }) {
     ];
       
     const options = {
-        title: "Breakdown of Match Types",
+        title: "Breakdown of Profile Interactions",
         colors: ['pink', 'purple', 'teal', 'coral']
     };
       
@@ -41,7 +41,6 @@ function PieChart({ matches }) {
             height={"400px"}
         />
     );
-
     
 }
 

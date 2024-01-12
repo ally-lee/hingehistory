@@ -1,11 +1,3 @@
-# todo
-- test voice prompts, video prompts
-- handle when photos and videos aren't available
-- download csv
-- custom domain
-- ask christina about prompt polls
-- clean up
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

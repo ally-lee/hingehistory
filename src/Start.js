@@ -1,7 +1,6 @@
 import React from 'react';
 import ImportFromFileBodyComponent from './ImportFromFileBodyComponent';
 
-
 function Start({ setMatches }) {
     return (
         <div className='welcome'>
@@ -20,6 +19,9 @@ function Start({ setMatches }) {
             <p>
                 This app runs entirely in your browser so I am not storing or accessing your personal data 
                 in any way.
+            </p>
+            <p>
+                Created by: Ally Lee
             </p>
             </div>
         </div>
