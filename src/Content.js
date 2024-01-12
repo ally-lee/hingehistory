@@ -21,7 +21,6 @@ function Content({ matches }) {
                 Your dataset also includes profiles that liked you first and profiles you disliked,
                 but we don't have any information about those profiles.
                 If you want to access your complete dataset, click "Export Data".
-                If a photo or video isn't available, that user likely deleted their Hinge account.
             </p>
             <div className='likes-header'>
                 <h1>Likes You've Sent</h1>
