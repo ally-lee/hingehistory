@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hingehistory/static/css/main.0dadc90b.css",
+    "main.js": "/hingehistory/static/js/main.b1ec8143.js",
+    "static/js/787.113198cc.chunk.js": "/hingehistory/static/js/787.113198cc.chunk.js",
+    "index.html": "/hingehistory/index.html",
+    "main.0dadc90b.css.map": "/hingehistory/static/css/main.0dadc90b.css.map",
+    "main.b1ec8143.js.map": "/hingehistory/static/js/main.b1ec8143.js.map",
+    "787.113198cc.chunk.js.map": "/hingehistory/static/js/787.113198cc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0dadc90b.css",
+    "static/js/main.b1ec8143.js"
+  ]
+}
