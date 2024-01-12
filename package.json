@@ -1,6 +1,7 @@
 {
   "name": "hingehistory",
   "version": "0.1.0",
+  "homepage": "http://ally-lee.github.io/hingehistory",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -12,14 +13,13 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://ally-lee.github.io/hingehistory",
   "scripts": {
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
