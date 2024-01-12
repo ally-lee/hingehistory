@@ -38,7 +38,7 @@ function LikeList({ matches, filter, sort }) {
     return matches.filter(match => match.like != null)
             .filter(filterMatches)
             .toSorted(sortFn)
-            .map(match => <Like className='like' key={match.like} match={match} />);
+            .map(match => <Like key={match.like} match={match} />);
     
 }
 

@@ -26,6 +26,7 @@
   align-items: center;
   justify-content: center;
   background-image: url('./heart.png');
+  background-size: 300px;
 }
 
 .welcome .content {
@@ -47,7 +48,7 @@
   background-image: url('./heart.png'), url('./heart.png');
   background-position: top 10px left 10px, top 10px right 10px;
   background-repeat: no-repeat;
-  background-size: 80px;
+  background-size: 60px;
 }
 
 .content {
@@ -91,9 +92,13 @@ li {
 label {
   padding: 5px;
   margin: 0 5px;
-  display: inline-flex;
 }
 
 .info {
   padding: 0 100px;
+}
+
+.form-section {
+  display: inline-flex;
+  margin: 0 30px;
 }
